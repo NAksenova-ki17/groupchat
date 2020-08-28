@@ -9,5 +9,4 @@ sockjs==0.10.0
 sockjs-tornado==1.0.7
 tornado==6.0.4
 typing-extensions==3.7.4.3
-UNKNOWN==0.0.0
 yarl==1.5.1
