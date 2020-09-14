@@ -22,7 +22,7 @@ class ChatConnection(sockjs.tornado.SockJSConnection):
 
     def on_open(self, info):
         # Send that someone joined
-        self.broadcast(self.participants, "Незнакомец подключился.")
+        self.broadcast(self.participants, "Незнакомец подключидся.")
 
         # Add client to the clients list
         self.participants.add(self)
