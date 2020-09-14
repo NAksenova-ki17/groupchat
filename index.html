@@ -3,11 +3,11 @@
 <head lang="en">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Чат с незнакомцами | Анонимный чат</title>
+  <title>Групповой Чат</title>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/sockjs/0.3/sockjs.min.js"></script>
-  <meta name="keywords" content="анонимный чат, чат с незнакомцем"/>
-  <meta name="description" content="Анонимный чат с незнакомцем" />
+  <meta name="keywords" content="Групповой чат"/>
+  <meta name="description" content="Групповой чат" />
   <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAARacoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAEQAAAAAAAAAREAAAAAAAABERAAAREREREREAARERERERERABEREREREREAEREREREREQARERERERERABEREREREREAEREREREREQARERERERERAAERERERERAAAAAAAAAAAAAAAAAAAAAAD//wAA/98AAP/PAAD/xwAA/8MAAMADAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAwAMAAP//AAD//wAA" rel="icon" type="image/x-icon" />
   <script>
     $(function() {
@@ -36,7 +36,7 @@
         };
 
         conn.onmessage = function(e) {
-          log('Незнакомец: ' + e.data);
+          log('Собеседник: ' + e.data);
         };
 
         conn.onclose = function() {
@@ -92,8 +92,41 @@
 </script>
 </head>
 <style>
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+        body {
+        -moz-background-size: 50% auto;
+        -webkit-background-size: 50% auto;
+        background-size: 50% auto;
+        width: 100%;
+        height: 100%;
+        }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+        body {
+        -moz-background-size: 50% auto;
+        -webkit-background-size: 50% auto;
+        background-size: 50% auto;
+        width: 100%;
+        height: 100%;
+        }
+}
+
+@media screen and (min-width: 320px) and (max-width: 568px) {
+        body {
+        -moz-background-size: 50% auto;
+        -webkit-background-size: 50% auto;
+        background-size: 50% auto;
+        width: 100%;
+        height: 100%;
+        }
+}
   body{
-    background: url(http://nekto.me/template/assets/images/bg.png) repeat;
+    background: url(https://www.topodigitalsea.com/wp-content/uploads/2018/02/idea-architecture.jpg) repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   form input,#log{
     background: white;
@@ -103,30 +136,14 @@
     margin-top: 10px;
   }
   #text{
-      border-radius: 4px;
+      border-radius: 5px;
       height: 20px;
-     border-color: #0e7cb7;
-  }
-  input[type=submit]{
-    background: #1e94d4;
-    border-color: #0e7cb7;
-    color: white;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-     width: 32%;
-    border-radius: 4px;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+      width: 45em;
+      border: 1px solid black
   }
 </style>
-<body style="    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;">
-<h3>Групповой анонимный чат</h3>
+<body>
+<h2>Групповой чат</h2>
 <div id="protocols" style="display: none">
   <ul>
     <li>
@@ -159,15 +176,14 @@
     </li>
   </ul>
 </div>
-
 <div>
-  <a id="connect" href="#">Подключиться</a>&nbsp;|&nbsp;Статус: <span id="status">отключён</span>
+  <a id="connect" href="#">Подключиться</a> - Статус: <span id="status">Отключён</span>
 </div>
-<div id="log" style="width: 40em; height: 20em; overflow:auto; border: 1px solid black">
-</div>
-<form id="chatform" style="    padding-top: 20px;">
+<form id="chatform">
   <input id="text" type="text" />
   <input type="submit" />
 </form>
+<div id="log" style="width: 40em; height: 20em; overflow:auto; border-radius: 5px; border: 1px solid black">
+</div>
 </body>
 </html>
