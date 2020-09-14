@@ -22,7 +22,7 @@ class ChatConnection(sockjs.tornado.SockJSConnection):
 
     def on_open(self, info):
         # Send that someone joined
-        self.broadcast(self.participants, "Незнакомец подключидся.")
+        self.broadcast(self.participants, "Незнакомец подключился.")
 
         # Add client to the clients list
         self.participants.add(self)
@@ -50,7 +50,7 @@ if __name__ == "__main__":
             [(r"/", IndexHandler)] + ChatRouter.urls
     )
 
-    # 3. Make Tornado app listen on port 8080
+    # 3. Make Tornado app listen on port 5000W
     app.listen(os.environ.get("PORT", 5000))
 
     # 4. Start IOLoop
