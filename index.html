@@ -6,6 +6,7 @@
   <title>Групповой Чат</title>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/sockjs/0.3/sockjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
   <meta name="keywords" content="Групповой чат"/>
   <meta name="description" content="Групповой чат" />
   <script>
@@ -25,7 +26,7 @@
             return $(this).attr('id');
         }).get();
 
-        conn = new SockJS('http://' + window.location.host + '/chat', transports);
+        conn = new SockJS('https://groupchatr.herokuapp.com');
 
         log('Подключаемся...');
 
@@ -44,7 +45,7 @@
           update_ui();
         };
       }
-      
+
       function disconnect() {
         if (conn != null) {
           log('Отключаемся...');
