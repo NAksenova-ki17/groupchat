@@ -8,7 +8,6 @@
   <script src="//cdn.jsdelivr.net/sockjs/0.3/sockjs.min.js"></script>
   <meta name="keywords" content="Групповой чат"/>
   <meta name="description" content="Групповой чат" />
-  <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAARacoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAEQAAAAAAAAAREAAAAAAAABERAAAREREREREAARERERERERABEREREREREAEREREREREQARERERERERABEREREREREAEREREREREQARERERERERAAERERERERAAAAAAAAAAAAAAAAAAAAAAD//wAA/98AAP/PAAD/xwAA/8MAAMADAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAwAMAAP//AAD//wAA" rel="icon" type="image/x-icon" />
   <script>
     $(function() {
       var conn = null;
@@ -20,7 +19,7 @@
       }
 
       function connect() {
-        disconnect();
+        //disconnect();
 
         var transports = $('#protocols input:checked').map(function(){
             return $(this).attr('id');
