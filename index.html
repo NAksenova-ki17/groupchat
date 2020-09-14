@@ -25,7 +25,7 @@
             return $(this).attr('id');
         }).get();
 
-        conn = new SockJS('http://' + window.location.host + '/chat', transports);
+        conn = new SockJS('https://' + window.location.host + '/chat', transports);
 
         log('Подключаемся...');
 
