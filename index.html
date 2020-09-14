@@ -6,9 +6,13 @@
   <title>Чат с незнакомцами | Анонимный чат</title>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/sockjs/0.3/sockjs.min.js"></script>
+<<<<<<< HEAD
   <meta name="keywords" content="анонимный чат, чат с незнакомцем"/>
   <meta name="description" content="Анонимный чат с незнакомцем" />
-  <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAARacoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAEQAAAAAAAAAREAAAAAAAABERAAAREREREREAARERERERERABEREREREREAEREREREREQARERERERERABEREREREREAEREREREREQARERERERERAAERERERERAAAAAAAAAAAAAAAAAAAAAAD//wAA/98AAP/PAAD/xwAA/8MAAMADAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAwAMAAP//AAD//wAA" rel="icon" type="image/x-icon" />
+=======
+  <meta name="keywords" content="Групповой чат"/>
+  <meta name="description" content="Групповой чат" />
+>>>>>>> 724e2a14c0415eca9a81f7cf9dc99b5213fda480
   <script>
     $(function() {
       var conn = null;
@@ -20,7 +24,7 @@
       }
 
       function connect() {
-        disconnect();
+        //disconnect();
 
         var transports = $('#protocols input:checked').map(function(){
             return $(this).attr('id');
