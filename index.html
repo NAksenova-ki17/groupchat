@@ -37,14 +37,14 @@
         conn.onmessage = function(e) {
           log('Собеседник: ' + e.data);
         };
-      /*
+
         conn.onclose = function() {
           log('Отключились.');
           conn = null;
           update_ui();
         };
       }
-*/
+      
       function disconnect() {
         if (conn != null) {
           log('Отключаемся...');
